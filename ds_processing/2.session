@@ -1,0 +1,12 @@
+window_sizes 1920 1017 450 1465 867 104
+
+diagrams
+  active  classdiagram_ref 128002 // main
+    1465 867 100 A3 0 0
+end
+show_stereotypes
+selected attribute_ref 148482 // col_attributes
+open
+  class_ref 128002 // Schema
+end
+end
