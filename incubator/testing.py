@@ -13,14 +13,9 @@ for c in g:
 '''
 
 #from dsp_library import DataSchema
-from dsp_library import Schema as s
+import dsp_library as d
 
-
-sc = s.DataSchema("C:\DIRECT\source_code\ds_processing\Book1.csv")
-
-p = sc.raw_data["type_mssql"]
-
-print(p)
- print(type(p))
-     
-
+sc = d.Schema("C:\DIRECT\source_code\ds_processing\Book1.csv")
+mssql = sc.cols_attributes["type_mssql"]
+for k,v in mssql.items():
+        print("{}  {},".format(k,v))

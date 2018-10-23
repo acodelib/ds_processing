@@ -1,4 +1,4 @@
-﻿col_name,col_alias,col_desc,type_sfdc,type_mssql,type_vertica
+column_name,col_alias,col_desc,type_sfdc,type_mssql,type_vertica
 id,fdasdf,fdasdf,fdasdf,fdasdf,fdasdf
 name,fasdf,fasdf,fasdf,fasdf,fasdf
 dob,fdasdf,fdasdf,fdasdf,fdasdf,fdasdf
