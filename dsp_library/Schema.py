@@ -3,7 +3,7 @@ import csv
 import copy
 
 class Schema(object):
-    '''ETL Pipelines application domain. \n Represents the columns attributes in a data flow.'''
+    """ETL Pipelines application domain. \n Represents the columns attributes in a data flow."""
 
     schema_cols = []    
     schema_attributes = []
@@ -28,11 +28,11 @@ class Schema(object):
             print(self.schema_attributes)
             
             for rw in csv_as_dict:    
-                if rw['column_name']=="column_name":
+                if rw["column_name"]=="column_name":
                     continue
-                self.schema_cols.append(rw['column_name'])                                                
+                self.schema_cols.append(rw["column_name"])                                                
                 for a in self.schema_attributes:
-                    self.cols_attributes[a][rw['column_name']] = rw[a]
+                    self.cols_attributes[a][rw["column_name"]] = rw[a]
             print(self.schema_cols)                    
             print(self.cols_attributes)
             
