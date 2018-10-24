@@ -1,9 +1,9 @@
-from abc import ABCMeta,abstractmethod
+from abc import ABCMeta,abstractmethod,ABC
 from dsp_library import Schema
 import inspect
 
 
-class DataAdapter(object):
+class DataAdapter(ABC):
     '''Defines the abstraction of a Data Adapter type. This type handles operations (SELECT DML and DDL) against a DB-like source'''
     __metaclass__ = ABCMeta
 
@@ -29,3 +29,8 @@ class DataAdapter(object):
     def __init__(self,**kwargs):
         self.name = kwargs["name"]
     ##------------------------------------------------------METHODS------------------------------------------------------------------
+
+    @abstractmethod
+    def intoarceCeva(self,value):
+        
+        return
