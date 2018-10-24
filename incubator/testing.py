@@ -16,6 +16,8 @@ for c in g:
 import dsp_library as d
 
 sc = d.Schema("C:\DIRECT\source_code\ds_processing\Book1.csv")
-mssql = sc.cols_attributes["type_mssql"]
-for k,v in mssql.items():
-        print("{}  {},".format(k,v))
+
+mssql = d.MssqlAdapter(name="Andrei")
+mssql.schema = sc
+
+print(mssql.TYPE_TAG,mssql.name)

@@ -5,16 +5,14 @@ import copy
 class Schema(object):
     """ETL Pipelines application domain. \n Represents the columns attributes in a data flow."""
 
-    schema_cols = []    
-    schema_attributes = []
-    cols_attributes = {}
-    raw_data  = None
-    metadata = {}
+    schema_cols         = []    
+    schema_attributes   = []
+    cols_attributes     = {}
+    raw_data            = None
+    metadata            = {}
 
 
-    def __init__(self, path_to_csv_schema):
-        #self.raw_data = pandas.DataFrame.from_csv(path= path_to_csv_schema,parse_dates=False)        
-        #print(self.raw_data)        
+    def __init__(self, path_to_csv_schema):              
         with open(path_to_csv_schema,"r") as schema_file:
             csv_as_dict = csv.DictReader(schema_file)
 
@@ -24,8 +22,8 @@ class Schema(object):
             for dt in self.schema_attributes:
                 self.cols_attributes[dt] = {}                            
             schema_file.seek(0)
-            print(type(self.schema_attributes))
-            print(self.schema_attributes)
+            #print(type(self.schema_attributes))
+            #print(self.schema_attributes)
             
             for rw in csv_as_dict:    
                 if rw["column_name"]=="column_name":
@@ -33,8 +31,8 @@ class Schema(object):
                 self.schema_cols.append(rw["column_name"])                                                
                 for a in self.schema_attributes:
                     self.cols_attributes[a][rw["column_name"]] = rw[a]
-            print(self.schema_cols)                    
-            print(self.cols_attributes)
+            #print(self.schema_cols)                    
+            #print(self.cols_attributes)
             
       
         
